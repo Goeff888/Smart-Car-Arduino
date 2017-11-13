@@ -1,4 +1,4 @@
-//www.elegoo.com
+//Christian Göhler
 //2016.12.9
 
 #include "IRReceiver.h"
@@ -7,7 +7,7 @@ int receiver = 11; // Signal Pin of IR receiver to Arduino Digital Pin 11
 
 
 IRReceiver irrecv(receiver);     
-    
+//decode_results results;   
 
 //delay(500); // Do not get immediate repeat
 
@@ -25,12 +25,8 @@ void setup()
 void loop()  
 {
   
-  if (irrecv.decodeData(&results)) // have we received an IR signal?
-
-  //{
-    //translateIR(); 
-    //irrecv.resume(); // receive the next value
-  //}  
+  irrecv.decodeData(); // have we received an IR signal?
+  
 }
 
 
